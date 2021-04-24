@@ -1,0 +1,11 @@
+- name  : Configurate kvm installing
+  hosts : kvm_servers
+  become: true
+
+  tasks:
+    - name : install kvm and helpfull api
+      
+      command: "apt install -y qemu-kvm \
+                      libvirt-daemon-system \
+                      bridge-utils \
+                      virtinst"
